@@ -1,0 +1,16 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: my-config
+data:
+  DBURL: jdbc:postgresql://my-postgresql:5432/postgres
+--
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: auth-sql
+data:
+  schema.sql: |
+     #!/bin/bash
+     echo "It`s done"
